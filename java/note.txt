@@ -1,0 +1,23 @@
+JBoss与Tomcat：选择Java Application Server
+对于刚开发在线Java应用程序和基于Java的站点的开发人员来说，在各种Java应用程序服务器之间进行选择可能是一项挑战。三巨头是Tomcat，Glassfish和JBoss。所有这些都是开发和部署应用程序的优秀平台，但它们具有不同的优势。做出错误的选择可能导致更多的工作超出必要的工作量，因此我们将通过快速指南来解决混淆问题，以便最适合您的应用程序服务器。
+在2013年，JBoss收到了名称更改，现在称为WildFly，但旧名称仍然被广泛使用，特别是那些使用旧版本的人，所以，我们暂时坚持称它为JBoss。
+什么是JBoss？
+由JBoss（Red Hat Inc.的子公司）开发 - JBoss应用服务器充当IBM WebSphere和SAP NetWeaver等解决方案的开源替代方案。它主要依赖于Sun Microsystems的Enterprise JavaBeans API来实现功能。与在EJB上开发的大多数系统一样，它旨在允许开发人员主要关注服务器的业务架构，而不是陷入不必要的编程和编码以连接不同的工作部件。
+除了免费提供JBoss及其所有相关中间件外，Red Hat还开展了一项开发人员计划，允许订阅者直接访问独家内容和以产品为中心的论坛。该程序也是免费提供的，主要用于推动JBoss开发并培养积极的开发人员社区。鼓励开发人员参与官方董事会，在他们出现的任何地方提供代码和报告问题。
+JBoss轻巧且易于使用云，功能强大，可用于企业，并具有中间件产品组合，可帮助加速应用程序开发，部署，性能，数据集成和自动化。在JBoss的网站提供了广泛的开发教材，培训课程，并为新的和经验丰富的开发者资料文件。
+什么是Tomcat？
+通常被称为“Apache Tomcat”，Tomcat在技术上根本不是一个应用程序服务器 - 这一事实在初次使用者之间产生了一些混淆，因为“应用程序服务器”和“Web服务器”经常互换使用。
+相反，Tomcat更像是一个Web服务器和Web容器。这并不意味着它缺乏功能，请注意。它是Java Servlet，JavaServer Pages，Java Expression Language和Java WebSocket Technologies的开源实现，旨在作为支持大规模任务关键型Web应用程序的平台。它被多个行业和垂直行业的主要企业使用，包括开发，金融，医疗保健，政府，电子商务，零售和营销。
+与JBoss一样，Tomcat的核心开发人员强烈鼓励社区参与其平台的发展。他们拥有广泛的开发社区，提供全面的文档和积极的支持论坛。Apache还维护一个邮件列表，其中包含有关Tomcat的更新，提示和技巧以及信息。
+JBoss和Tomcat之间的主要差
+JBoss和Tomcat都是Java servlet应用服务器，但JBoss还有很多。两者之间的实质区别在于JBoss提供了完整的Java Enterprise Edition（JEE）堆栈，包括Enterprise JavaBeans和许多其他技术，这些技术对于从事企业Java应用程序的开发人员非常有用。Tomcat更受限制。想到它的一种方法是JBoss是一个包含servlet容器和Web服务器的JEE堆栈，而Tomcat在很大程度上是一个servlet容器和Web服务器。
+也就是说，它也可以运行企业应用程序，这一事实不会造成少量混淆。
+“许多应用程序开发人员并不太关注其代码运行的基础架构，” Java Zone的Manu PK写道。“当谈到Web应用程序时，Web服务器和应用程序服务器之间的区别[常见的混乱] ......通常，当[我们看到] Tomcat [具有]运行企业应用程序的能力时，我们会感到困惑。”
+何时选择JBoss
+对于开发人员需要完全访问Java Enterprise Edition提供的功能并且对其随附的功能的默认实现感到满意的应用程序，JBoss是最佳选择。如果您不需要全系列的JEE功能，那么选择JBoss会增加部署和资源开销的大量复杂性，而这些功能将不再使用。例如，JBoss安装文件比Tomcat大一个数量级。
+何时选择Tomcat
+Tomcat是一个Java servlet容器和Web服务器，因为它没有完整的JEE堆栈的实现，所以开箱即用的重量明显更轻。对于不需要具有两个主要优点的完整JEE堆栈的开发人员。
+显着降低复杂性和资源使用。
+模块化
+有许多与Tomcat一起使用的附加组件提供程序。开发人员可以选择他们想要用来添加额外功能的特定实现。例如，Tomcat无法本机托管Enterprise JavaBeans。但是，如果用户需要Enterprise JavaBeans（EJB）功能（如EJB容器模型提供的持久性和事务处理），但希望避免主要实现中固有的问题，则有许多轻量级替代方案，包括Spring Framework和OpenEJB
+复杂Java企业应用程序的开发人员应该选择JBoss（或GlassFish），而那些不需要完整JEE堆栈的人最好使用Tomcat以及他们需要的任何扩展。
